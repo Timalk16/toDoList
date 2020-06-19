@@ -7,6 +7,7 @@
 
     let todoData = [];
 
+
     
 
 
@@ -54,15 +55,15 @@
     todoControl.addEventListener('submit', function (event) {
         event.preventDefault();
         if (!headerInput.value) return;
-
         const newTodo = {
             value: headerInput.value,
             completed: false
         };
 
-        localStorage.setItem('todo', JSON.stringify(todoData));
+        
 
         todoData.push(newTodo);
+        localStorage.setItem('todo', JSON.stringify(todoData));
         headerInput.value = '';
 
         render();
