@@ -40,7 +40,7 @@
             });
             todoRemoveBtn.addEventListener('click', function () {
                 li.remove();
-                todoData.splice(item, 1);
+                todoData.splice(todoData.indexOf(item), 1);
                 localStorage.setItem('todo', JSON.stringify(todoData)); 
                render();
             });
